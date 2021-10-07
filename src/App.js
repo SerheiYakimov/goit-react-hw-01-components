@@ -4,9 +4,12 @@ import user from "./user.json";
 import { Statistics } from "./components/Statistics/Statistics";
 import { StatisticList } from "./components/StatisticList/StatisticList";
 import statisticalData from "./statistical-data.json";
+import { FriendListItem } from "./components/FriendListItem/FriendListItem";
+import friends from "./friends.json";
 
 function App() {
   const title = "Upload stats";
+  // const isOnline = true;
 
   return (
     <div className="App">
@@ -26,6 +29,14 @@ function App() {
           />
         ))}
       </Statistics>
+      {friends.map((friend) => (
+        <FriendListItem
+          key={friend.id}
+          avatar={friend.avatar}
+          name={friend.name}
+          status={friend.isOnline ? "green" : "red"}
+        />
+      ))}
     </div>
   );
 }
