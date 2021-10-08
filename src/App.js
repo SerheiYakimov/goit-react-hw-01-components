@@ -7,6 +7,8 @@ import statisticalData from "./statistical-data.json";
 import { FriendListItem } from "./components/FriendListItem/FriendListItem";
 import friends from "./friends.json";
 import { FriendList } from './components/FriendList/FriendsList';
+import transactions from './transactions.json';
+import { TransactionHistory } from "./components/TransactionHistory/TransactionHistory";
 
 function App() {
   const title = "Upload stats";
@@ -40,6 +42,9 @@ function App() {
         />
       ))}
       </FriendList>
+      <TransactionHistory>
+        {}
+      </TransactionHistory>
     </div>
   );
 }

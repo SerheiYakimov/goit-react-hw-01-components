@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function FriendListItem({ avatar, name, status }) {
   return (
     <li className="item">
@@ -7,3 +9,9 @@ export function FriendListItem({ avatar, name, status }) {
     </li>
   );
 }
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  status: PropTypes.string,
+};
