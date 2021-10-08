@@ -6,6 +6,7 @@ import { StatisticList } from "./components/StatisticList/StatisticList";
 import statisticalData from "./statistical-data.json";
 import { FriendListItem } from "./components/FriendListItem/FriendListItem";
 import friends from "./friends.json";
+import { FriendList } from './components/FriendList/FriendsList';
 
 function App() {
   const title = "Upload stats";
@@ -29,6 +30,7 @@ function App() {
           />
         ))}
       </Statistics>
+      <FriendList>
       {friends.map((friend) => (
         <FriendListItem
           key={friend.id}
@@ -37,6 +39,7 @@ function App() {
           status={friend.isOnline ? "green" : "red"}
         />
       ))}
+      </FriendList>
     </div>
   );
 }
