@@ -1,18 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-body {
-  /* margin-right: auto;
-  margin-left: auto;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: #eee; */
-  text-decoration: none;
 }

@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
+import styles from './Statistics.module.css';
 
 export function Statistics({ title, children }) {
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
-      {children}
+    <section className={styles.container}>
+      {title && <h2 className={styles.title}>{title}</h2>}
+      <ul className={styles.list}>
+        {children}
+      </ul> 
     </section>
   );
 }

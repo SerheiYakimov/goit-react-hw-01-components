@@ -1,0 +1,26 @@
+.container {
+  display: inline-block;
+  width: 350px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 150px;
+  margin-right: auto;
+  background-color: #eee;
+}
+
+.title {
+  text-align: center;
+  color: brown;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+  background-color: darkseagreen;
+}

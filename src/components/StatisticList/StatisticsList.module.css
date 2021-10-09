@@ -1,0 +1,10 @@
+.item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.label .percentage {
+  margin: 5px;
+}

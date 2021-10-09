@@ -1,13 +1,14 @@
 import PropTypes from "prop-types";
+import styles from './StatisticsList.module.css'
 
 export function StatisticList({ label, percentage }) {
   return (
-    <ul className="stat-list">
-      <li className="item">
-        <span className="label">{label}</span>
-        <span className="percentage">{percentage}%</span>
+    
+      <li className={styles.item}>
+        <span className={styles.label}>{label}</span>
+        <span className={styles.percentage}>{percentage}%</span>
       </li>
-    </ul>
+
   );
 }
 
