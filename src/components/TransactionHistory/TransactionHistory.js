@@ -1,4 +1,6 @@
-export function TransactionHistory({ type, amound, currency }) {
+import PropTypes from "prop-types";
+
+export function TransactionHistory({ children }) {
     return (
         <table className="transaction-history">
   <thead>
@@ -8,20 +10,12 @@ export function TransactionHistory({ type, amound, currency }) {
       <th>Currency</th>
     </tr>
   </thead>
-
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
+      {children}
 </table>
 
     )
 }
+
+TransactionHistory.propTypes = {
+  children: PropTypes.node,
+};

@@ -9,9 +9,11 @@ import friends from "./friends.json";
 import { FriendList } from './components/FriendList/FriendsList';
 import transactions from './transactions.json';
 import { TransactionHistory } from "./components/TransactionHistory/TransactionHistory";
+import { TransactionItem } from './components/TransactionItem/TransactionItem';
 
 function App() {
   const title = "Upload stats";
+  const items = transactions;
   // const isOnline = true;
 
   return (
@@ -43,7 +45,14 @@ function App() {
       ))}
       </FriendList>
       <TransactionHistory>
-        {}
+        {items.map((item) => (
+          <TransactionItem
+            key={item.id}
+            type={item.type}
+            amount={item.amount}
+            currency={item.currency}
+          />
+        ))}
       </TransactionHistory>
     </div>
   );
