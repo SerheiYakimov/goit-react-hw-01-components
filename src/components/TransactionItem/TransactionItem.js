@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
+import styles from './TransactionItem.module.css';
 
 export function TransactionItem({ type, amount, currency }) {
     return (
-        <tbody>
+        <tbody className={styles.tbody}>
             <tr>
             <td>{type}</td>
             <td>{amount}</td>
